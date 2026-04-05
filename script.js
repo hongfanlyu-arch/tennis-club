@@ -8,21 +8,20 @@ if (signupForm && formMessage) {
     const formData = new FormData(signupForm);
     const name = String(formData.get("name") || "").trim();
     const phone = String(formData.get("phone") || "").trim();
-    const ageGroup = String(formData.get("ageGroup") || "").trim();
-    const courseType = String(formData.get("courseType") || "").trim();
-    const phoneOk = /^1\d{10}$/.test(phone);
+    const profile = String(formData.get("ageGroup") || "").trim();
+    const interest = String(formData.get("courseType") || "").trim();
 
-    if (!name || !phone || !ageGroup || !courseType) {
-      formMessage.textContent = "请先完整填写报名信息。";
+    if (!name || !phone || !profile || !interest) {
+      formMessage.textContent = "Por favor, completa todos los campos obligatorios.";
       return;
     }
 
-    if (!phoneOk) {
-      formMessage.textContent = "请输入有效的 11 位手机号码。";
+    if (phone.replace(/\s+/g, "").length < 8) {
+      formMessage.textContent = "Introduce un teléfono válido para que podamos contactarte.";
       return;
     }
 
-    formMessage.textContent = `${name}，报名信息已提交，我们会尽快联系你。`;
+    formMessage.textContent = `${name}, hemos recibido tu solicitud. Te contactaremos pronto.`;
     signupForm.reset();
   });
 }
