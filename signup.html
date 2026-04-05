@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>曜动网球俱乐部 | 课程报名</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">曜动网球俱乐部</a>
+      <nav class="site-nav">
+        <a href="index.html">首页</a>
+        <a href="coaches.html">教练介绍</a>
+        <a class="active" href="signup.html">课程报名</a>
+        <a href="contact.html">联系方式</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container form-layout">
+      <div>
+        <p class="eyebrow">SIGN UP</p>
+        <h1>预约你的第一节网球课</h1>
+        <p class="lead">
+          填写信息后，我们会在 24 小时内与你联系，
+          为你安排适合的教练、班型和体验时间。
+        </p>
+      </div>
+
+      <form class="signup-form" id="signupForm">
+        <label>
+          姓名
+          <input type="text" name="name" placeholder="请输入姓名" required>
+        </label>
+        <label>
+          手机号码
+          <input type="tel" name="phone" placeholder="请输入手机号" required>
+        </label>
+        <label>
+          年龄段
+          <select name="ageGroup" required>
+            <option value="">请选择</option>
+            <option>6-12岁</option>
+            <option>13-17岁</option>
+            <option>18岁以上</option>
+          </select>
+        </label>
+        <label>
+          课程类型
+          <select name="courseType" required>
+            <option value="">请选择</option>
+            <option>青少年启蒙班</option>
+            <option>成人进阶班</option>
+            <option>一对一私教课</option>
+            <option>竞技提升班</option>
+          </select>
+        </label>
+        <label>
+          备注
+          <textarea name="message" rows="4" placeholder="可填写上课时间偏好、训练目标等"></textarea>
+        </label>
+        <button class="button primary" type="submit">提交报名</button>
+        <p class="form-message" id="formMessage" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>曜动网球俱乐部</p>
+      <p>提交后我们会尽快与你联系。</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
